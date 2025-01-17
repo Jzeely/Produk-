@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web Store E-Commerce">
+  <title>Web Store E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>My E-Store</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#products">Produk</a></li>
+          <li><a href="#cart" id="cart-link">Keranjang (<span id="cart-count">0</span>)</a></li>
+          <li><a href="#checkout">Checkout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <div class="hero">
+      <h2>Selamat datang di My E-Store!</h2>
+      <p>Temukan produk terbaik dengan harga terbaik.</p>
+      <input type="text" id="search-box" placeholder="Cari produk..." oninput="searchProducts()" />
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="container">
+    <h2>Produk Kami</h2>
+    <div class="product-list" id="product-list"></div>
+    <div id="pagination"></div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="container">
+    <h2>Keranjang Belanja</h2>
+    <div id="cart-items"></div>
+    <div id="cart-total">
+      <p>Total: <span id="cart-total-price">Rp 0</span></p>
+      <!-- //<button id="checkout-button" disabled>Checkout</button> -->
+    </div>
+  </section>
+
+  <!-- Checkout Section -->
+  <section id="checkout" class="container">
+    <h2>Proses Pembayaran</h2>
+    <form id="checkout-form">
+      <label for="address">Alamat Pengiriman:</label>
+      <textarea id="address" placeholder="Masukkan alamat pengiriman..." required></textarea>
+      <button type="submit">Selesaikan Pembelian</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 My E-Store | Semua Hak Dilindungi</p>
+    </div>
+  </footer>
+
+</body>
+</html>
